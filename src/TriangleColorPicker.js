@@ -287,11 +287,12 @@ export class TriangleColorPicker extends React.PureComponent {
         </View>
         <View style={[styles.colorPreviews, computed.colorPreviews]}>
           {oldColor && (
-            <TouchableOpacity>
+            <TouchableOpacity
               style={[styles.colorPreview, { backgroundColor: oldColor }]}
               onPress={this._onOldColorSelected}
               activeOpacity={0.7}
-              <Text>Press for old color</Text>
+            >
+              <Text style={styles.text}>Press for old color</Text>
             </TouchableOpacity>
           )}
           <TouchableOpacity
@@ -299,7 +300,7 @@ export class TriangleColorPicker extends React.PureComponent {
             onPress={this._onColorSelected}
             activeOpacity={0.7}
           >
-            <Text>Press for new color</Text>
+            <Text style={styles.text}>Press for new color</Text>
           </TouchableOpacity>
         </View>
       </View>
